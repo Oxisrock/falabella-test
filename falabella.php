@@ -2,26 +2,24 @@
 class falabella
 {
     //
-    public function countDown(){
+    public function render(){
         $limit = 100;
+        $string = [];
         for ($i=1; $i <= $limit; $i++) {
             switch ($i) {
                 case (($i%3) == 0) :
-                    echo "Falabella <br>";
+                    $string[] = "Falabella";
                     break;
                 case (($i%5) == 0) :
-                    echo "IT <br>";
+                    $string[] = "IT";
                     break;
                 default:
                     break;
             }
             if(($i%3)== 0 && ($i%5)== 0) {
-                echo "Integraciones <br>";
+                $string[] = "Integraciones";
             }
         }
+        return $string;
     }
 }
-
-$falabella = new falabella();
-
-$falabella->countDown();
